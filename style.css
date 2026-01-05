@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 350px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 30px rgba(255, 20, 147, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #ff4da6;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff4da6;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #bbb;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #ff4da6;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4da6;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1f8f;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4da6;
+}
